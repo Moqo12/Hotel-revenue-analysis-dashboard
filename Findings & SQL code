@@ -1,0 +1,30 @@
+Created a database in SQL Server Management to further analysis hotel booking data.
+
+# Fetched the data from excel
+select * from dbo.['2018$']
+select * from dbo.['2019$']
+select * from dbo.['2020$']
+
+# Combined the data
+select * from dbo.['2018$']
+union
+select * from dbo.['2019$']
+union
+select * from dbo.['2020$']
+
+# Explorator Data Analysis
+# 1. Is our hotel revenue growing yearly?
+# 2. Should we increase our parking lot size?
+# 3. What trends can we see in the data?
+
+Created a table with the combined data 
+with hotels as(
+select * from dbo.['2018$']
+union
+select * from dbo.['2019$']
+union
+select * from dbo.['2020$'])
+
+select * from hotels
+
+Q1
